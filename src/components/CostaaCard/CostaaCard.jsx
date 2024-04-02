@@ -41,7 +41,7 @@ export default function CostaaCard({ details }) {
                 src={details.img}
                 alt="costaan"
             />
-            <div className={styles.content}>
+            <div className={styles.contentContainer}>
                 <h1>{details.department}</h1>
                 <h2>{details.name}</h2>
                 <p>{details.desc}</p>
