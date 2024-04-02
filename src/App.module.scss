@@ -1,0 +1,24 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('./assets/background.png');
+    background-size: 100lvw 100dvh;
+    background-repeat: no-repeat;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topHUD {
+    aspect-ratio: 423 / 146.82;
+    height: 100px;
+}
