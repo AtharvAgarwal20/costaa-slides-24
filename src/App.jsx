@@ -11,7 +11,7 @@ import dvm from './assets/dvm.png'
 import costaa1 from './assets/costaaPic1.png'
 
 export default function App() {
-  const [costaaIndex, setCostaaIndex] = useState(0);
+  const [activeCostaan, setActiveCostaan] = useState(0);
 
   const { ref, startGlitch } = useGlitch({
     playMode: "manual",
@@ -100,7 +100,7 @@ export default function App() {
   window.addEventListener('keyup', (event) => {
     let digit = parseInt(event.code[event.code.length - 1]) - 1
     if (digit !== NaN && digit >= 0 && digit < 10) {
-      setCostaaIndex(digit)
+      setActiveCostaan(digit)
       startGlitch()
     }
   })
@@ -119,7 +119,7 @@ export default function App() {
           alt="logo"
         />
       </div>
-      <CostaaCard details={list[costaaIndex]} ref={ref} />
+      <CostaaCard details={list[activeCostaan]} ref={ref} />
     </main>
   )
 }
