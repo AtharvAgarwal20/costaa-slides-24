@@ -50,31 +50,29 @@ export default function App() {
     pulse: false,
   });
 
-  const [isLoading, setIsLoading] = useState(true);
+  function costaaChangeHandler(event) {
+    let digit = parseInt(event.code[event.code.length - 1]) - 1
+    if (digit !== NaN && digit >= 0 && digit < 10) {
+      setActiveCostaan(digit)
+    }
+  }
 
   useEffect(() => {
     const preloadArray = [dvm, pep, adp, pcra, spons, controls, recnacc, gensec, prez, TopHUDImage, logoNew]
 
-    async function loadAssets() {
-      try {
-        await Promise.all(
-          preloadArray.map((asset) => new Promise((resolve) => {
-            const img = new Image();
-            img.src = asset;
-            img.onload = resolve;
-            img.onerror = resolve; // Handling error case if the image fails to load
-          })
-          )
-        );
-        setIsLoading(false);
-      } catch (error) {
-        console.error("Error loading assets:", error);
-        setIsLoading(false); // Set isLoading to false to prevent indefinite loading in case of an error
-      }
+    for (let asset of preloadArray) {
+      let img = new Image()
+      img.src = asset
     }
 
-    loadAssets();
+    window.addEventListener('keyup', costaaChangeHandler)
+
+    return () => window.removeEventListener('keyup', costaaChangeHandler)
   }, [])
+
+  useEffect(() => {
+    startGlitch()
+  }, [activeCostaan])
 
 
   const list = [
@@ -133,14 +131,6 @@ export default function App() {
       'department': 'President, Students’ Union'
     }
   ]
-
-  window.addEventListener('keyup', (event) => {
-    let digit = parseInt(event.code[event.code.length - 1]) - 1
-    if (digit !== NaN && digit >= 0 && digit < 10) {
-      setActiveCostaan(digit)
-      startGlitch()
-    }
-  })
 
   return (
     <>
