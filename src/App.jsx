@@ -15,7 +15,7 @@ export default function App() {
     createContainers: true,
     hideOverflow: false,
     timing: {
-      duration: 700,
+      duration: 300,
       iterations: 1,
     },
     glitchTimeSpan: {
