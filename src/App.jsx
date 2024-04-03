@@ -1,10 +1,13 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import CostaaCard from './components/CostaaCard/CostaaCard';
 import { useGlitch } from 'react-powerglitch';
 
+import { Circle } from 'react-preloaders';
+
 import * as styles from './App.module.scss'
-import topHUDImage2 from './assets/topHUDNoLogo.png'
+
+import TopHUDImage from './assets/topHUDNoLogo.png'
 import logoNew from './assets/logoNew.png'
 
 import dvm from './assets/dvm.png'
@@ -47,12 +50,32 @@ export default function App() {
     pulse: false,
   });
 
-  const preloadArray = [dvm, pep, adp, pcra, spons, controls, recnacc, gensec, prez]
+  const [isLoading, setIsLoading] = useState(true);
 
-  for (let newImg of preloadArray) {
-    let img = new Image()
-    img.src = newImg
-  }
+  useEffect(() => {
+    const preloadArray = [dvm, pep, adp, pcra, spons, controls, recnacc, gensec, prez, TopHUDImage, logoNew]
+
+    async function loadAssets() {
+      try {
+        await Promise.all(
+          preloadArray.map((asset) => new Promise((resolve) => {
+            const img = new Image();
+            img.src = asset;
+            img.onload = resolve;
+            img.onerror = resolve; // Handling error case if the image fails to load
+          })
+          )
+        );
+        setIsLoading(false);
+      } catch (error) {
+        console.error("Error loading assets:", error);
+        setIsLoading(false); // Set isLoading to false to prevent indefinite loading in case of an error
+      }
+    }
+
+    loadAssets();
+  }, [])
+
 
   const list = [
     {
@@ -120,20 +143,23 @@ export default function App() {
   })
 
   return (
-    <main>
-      <div className={styles.topHUD}>
-        <img
-          className={styles.topHUD}
-          src={topHUDImage2}
-          alt="top hud"
-        />
-        <img
-          className={styles.topHUD}
-          src={logoNew}
-          alt="logo"
-        />
-      </div>
-      <CostaaCard details={list[activeCostaan]} ref={ref} />
-    </main>
+    <>
+      <Circle />
+      <main>
+        <div className={styles.topHUD}>
+          <img
+            className={styles.topHUD}
+            src={TopHUDImage}
+            alt="top hud"
+          />
+          <img
+            className={styles.topHUD}
+            src={logoNew}
+            alt="logo"
+          />
+        </div>
+        <CostaaCard details={list[activeCostaan]} ref={ref} />
+      </main>
+    </>
   )
 }
