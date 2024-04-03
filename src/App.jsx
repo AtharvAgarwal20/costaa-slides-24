@@ -4,11 +4,18 @@ import CostaaCard from './components/CostaaCard/CostaaCard';
 import { useGlitch } from 'react-powerglitch';
 
 import * as styles from './App.module.scss'
-import topHUDImage from './assets/TopHUD.png'
 import topHUDImage2 from './assets/topHUDNoLogo.png'
 import logoNew from './assets/logoNew.png'
+
 import dvm from './assets/dvm.png'
-import costaa1 from './assets/costaaPic1.png'
+import gensec from './assets/gensec.png'
+import prez from './assets/prez.png'
+import spons from './assets/spons.png'
+import pep from './assets/pep.png'
+import controls from './assets/controls.png'
+import pcra from './assets/pcra.png'
+import adp from './assets/adp.png'
+import recnacc from './assets/recnacc.png'
 
 export default function App() {
   const [activeCostaan, setActiveCostaan] = useState(0);
@@ -18,7 +25,7 @@ export default function App() {
     createContainers: true,
     hideOverflow: false,
     timing: {
-      duration: 300,
+      duration: 150,
       iterations: 1,
     },
     glitchTimeSpan: {
@@ -49,49 +56,49 @@ export default function App() {
     },
     {
       'name': "Aarohi Uniyal",
-      'img': costaa1,
+      'img': pep,
       'desc': 'Lorem ipsum dolor sit amet consectetur. Pharetra dui fringilla blandit sit.',
       'department': 'Department of Paper Evaluation and Presentation'
     },
     {
       'name': "Yash Choudhary",
-      'img': costaa1,
+      'img': adp,
       'desc': 'Lorem ipsum dolor sit amet consectetur. Pharetra dui fringilla blandit sit.',
       'department': 'Department of Art, Design and Publicity'
     },
     {
       'name': "Sachika Lala",
-      'img': costaa1,
+      'img': pcra,
       'desc': 'Lorem ipsum dolor sit amet consectetur. Pharetra dui fringilla blandit sit.',
       'department': 'Department of Publications and Correspondence Apogee'
     },
     {
       'name': "Dharun R. Bail",
-      'img': costaa1,
+      'img': controls,
       'desc': 'Lorem ipsum dolor sit amet consectetur. Pharetra dui fringilla blandit sit.',
       'department': 'Department of Controls'
     },
     {
       'name': "Tushar Vigh",
-      'img': costaa1,
+      'img': recnacc,
       'desc': 'Lorem ipsum dolor sit amet consectetur. Pharetra dui fringilla blandit sit.',
       'department': 'Department of Reception and Accommodation'
     },
     {
       'name': "Hitansh Tanna",
-      'img': costaa1,
+      'img': spons,
       'desc': 'Lorem ipsum dolor sit amet consectetur. Pharetra dui fringilla blandit sit.',
       'department': 'Department of Sponsorship and Marketing'
     },
     {
       'name': "Abhinav Lamba",
-      'img': costaa1,
+      'img': gensec,
       'desc': 'Lorem ipsum dolor sit amet consectetur. Pharetra dui fringilla blandit sit.',
       'department': 'General Secretary, Students’ Union'
     },
     {
       'name': "Sarthak Aggarwal",
-      'img': costaa1,
+      'img': prez,
       'desc': 'Lorem ipsum dolor sit amet consectetur. Pharetra dui fringilla blandit sit.',
       'department': 'President, Students’ Union'
     }
