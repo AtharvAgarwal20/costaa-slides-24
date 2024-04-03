@@ -5,6 +5,7 @@ import { useGlitch } from 'react-powerglitch';
 
 import * as styles from './App.module.scss'
 import topHUDImage from './assets/TopHUD.png'
+import dvm from './assets/dvm.png'
 import costaa1 from './assets/costaaPic1.png'
 
 export default function App() {
@@ -40,57 +41,57 @@ export default function App() {
   const list = [
     {
       'name': "Vedant Vyas",
-      'img': costaa1,
+      'img': dvm,
       'desc': 'Lorem ipsum dolor sit amet consectetur. Pharetra dui fringilla blandit sit.',
       'department': 'Department of Visual Media'
     },
     {
-      'name': "Vedant Vyas",
+      'name': "Aarohi Uniyal",
       'img': costaa1,
       'desc': 'Lorem ipsum dolor sit amet consectetur. Pharetra dui fringilla blandit sit.',
-      'department': 'ADP'
+      'department': 'Department of Paper Evaluation and Presentation'
     },
     {
-      'name': "Vedant Vyas",
+      'name': "Yash Choudhary",
       'img': costaa1,
       'desc': 'Lorem ipsum dolor sit amet consectetur. Pharetra dui fringilla blandit sit.',
-      'department': 'Spons'
+      'department': 'Department of Art, Design and Publicity'
     },
     {
-      'name': "Vedant Vyas",
+      'name': "Sachika Lala",
       'img': costaa1,
       'desc': 'Lorem ipsum dolor sit amet consectetur. Pharetra dui fringilla blandit sit.',
-      'department': 'PEP'
+      'department': 'Department of Publications and Correspondence Apogee'
     },
     {
-      'name': "Vedant Vyas",
+      'name': "Dharun R. Bail",
       'img': costaa1,
       'desc': 'Lorem ipsum dolor sit amet consectetur. Pharetra dui fringilla blandit sit.',
-      'department': 'PCrA'
+      'department': 'Department of Controls'
     },
     {
-      'name': "Vedant Vyas",
+      'name': "Tushar Vigh",
       'img': costaa1,
       'desc': 'Lorem ipsum dolor sit amet consectetur. Pharetra dui fringilla blandit sit.',
-      'department': 'RecNAcc'
+      'department': 'Department of Reception and Accommodation'
     },
     {
-      'name': "Vedant Vyas",
+      'name': "Hitansh Tanna",
       'img': costaa1,
       'desc': 'Lorem ipsum dolor sit amet consectetur. Pharetra dui fringilla blandit sit.',
-      'department': 'Controls'
+      'department': 'Department of Sponsorship and Marketing'
     },
     {
-      'name': "Vedant Vyas",
+      'name': "Abhinav Lamba",
       'img': costaa1,
       'desc': 'Lorem ipsum dolor sit amet consectetur. Pharetra dui fringilla blandit sit.',
-      'department': 'SU Prez'
+      'department': 'General Secretary, Students’ Union'
     },
     {
-      'name': "Vedant Vyas",
+      'name': "Sarthak Aggarwal",
       'img': costaa1,
       'desc': 'Lorem ipsum dolor sit amet consectetur. Pharetra dui fringilla blandit sit.',
-      'department': 'SU Gensec'
+      'department': 'President, Students’ Union'
     }
   ]
 

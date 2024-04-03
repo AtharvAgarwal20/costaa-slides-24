@@ -19,8 +19,8 @@ const CostaaCard = forwardRef(function ({ details }, ref) {
                 alt="costaan"
             />
             <div className={styles.contentContainer}>
-                <h1>{details.department}</h1>
-                <h2>{details.name}</h2>
+                <h1>{details.name}</h1>
+                <h2>{details.department}</h2>
                 <p>{details.desc}</p>
             </div>
         </div>
