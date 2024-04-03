@@ -47,6 +47,13 @@ export default function App() {
     pulse: false,
   });
 
+  const preloadArray = [dvm, pep, adp, pcra, spons, controls, recnacc, gensec, prez]
+
+  for (let newImg of preloadArray) {
+    let img = new Image()
+    img.src = newImg
+  }
+
   const list = [
     {
       'name': "Vedant Vyas",
