@@ -22,7 +22,7 @@ main {
 $hud-height: 140px;
 
 @mixin hud-styles($aspect-width, $aspect-height, $height) {
-    aspect-ratio: $aspect-width / $aspect-height;
+    aspect-ratio: calc($aspect-width / $aspect-height);
     position: fixed;
     height: $height;
     left: 50%;
