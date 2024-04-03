@@ -5,6 +5,8 @@ import { useGlitch } from 'react-powerglitch';
 
 import * as styles from './App.module.scss'
 import topHUDImage from './assets/TopHUD.png'
+import topHUDImage2 from './assets/topHUDNoLogo.png'
+import logoNew from './assets/logoNew.png'
 import dvm from './assets/dvm.png'
 import costaa1 from './assets/costaaPic1.png'
 
@@ -105,11 +107,18 @@ export default function App() {
 
   return (
     <main>
-      <img
-        className={styles.topHUD}
-        src={topHUDImage}
-        alt="top hud"
-      />
+      <div className={styles.topHUD}>
+        <img
+          className={styles.topHUD}
+          src={topHUDImage2}
+          alt="top hud"
+        />
+        <img
+          className={styles.topHUD}
+          src={logoNew}
+          alt="logo"
+        />
+      </div>
       <CostaaCard details={list[costaaIndex]} ref={ref} />
     </main>
   )

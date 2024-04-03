@@ -7,6 +7,7 @@ body {
     background-image: url('./assets/background.png');
     background-size: 100lvw 100dvh;
     background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 main {
@@ -18,7 +19,23 @@ main {
     align-items: center;
 }
 
+$hud-height: 140px;
+
+@mixin hud-styles($aspect-width, $aspect-height, $height) {
+    aspect-ratio: $aspect-width / $aspect-height;
+    position: fixed;
+    height: $height;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 .topHUD {
-    aspect-ratio: 423 / 146.82;
-    height: 100px;
+    img:first-of-type {
+        @include hud-styles(423, 146.82, $hud-height);
+    }
+
+    img:last-of-type {
+        @include hud-styles(104.238, 100, $hud-height + 50px);
+        top: -40px;
+    }
 }
