@@ -16,37 +16,40 @@ $white: #FFFFFF;
     height: calc(100vh - 160px);
     position: fixed;
     bottom: 10px;
-    left: 0px;
+    left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 4rem;
 
     img[alt="card frame"] {
         position: absolute;
-        width: 90%;
+        width: 100%;
         height: 100%;
-        left: 5%;
     }
 
-    img[alt="costaan"] {
-        z-index: 1;
+    .imageContainer {
         aspect-ratio: 474 / 619.48;
         height: 60%;
-        // position: absolute;
-        // left: 15%;
+
+        img[alt="costaan"] {
+            z-index: 1;
+            aspect-ratio: 474 / 619.48;
+            height: 60%;
+            position: absolute;
+            left: 12%;
+        }
     }
 
     .contentContainer {
         z-index: 1;
-        // position: absolute;
-        // right: 15%;
+        position: absolute;
+        right: 10%;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 50%;
-        gap: 25px;
+        gap: 15px;
 
         h1 {
             @include text-styles(2px, $cyan, 45px);

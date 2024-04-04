@@ -79,55 +79,47 @@ export default function App() {
     {
       'name': "Vedant Vyas",
       'img': dvm,
-      'desc': 'Lorem ipsum dolor sit amet consectetur. Pharetra dui fringilla blandit sit.',
+
       'department': 'Department of Visual Media'
     },
     {
       'name': "Aarohi Uniyal",
       'img': pep,
-      'desc': 'Lorem ipsum dolor sit amet consectetur. Pharetra dui fringilla blandit sit.',
       'department': 'Department of Paper Evaluation and Presentation'
     },
     {
       'name': "Yash Choudhary",
       'img': adp,
-      'desc': 'Lorem ipsum dolor sit amet consectetur. Pharetra dui fringilla blandit sit.',
       'department': 'Department of Art, Design and Publicity'
     },
     {
       'name': "Sachika Lala",
       'img': pcra,
-      'desc': 'Lorem ipsum dolor sit amet consectetur. Pharetra dui fringilla blandit sit.',
       'department': 'Department of Publications and Correspondence Apogee'
     },
     {
       'name': "Dharun R. Bail",
       'img': controls,
-      'desc': 'Lorem ipsum dolor sit amet consectetur. Pharetra dui fringilla blandit sit.',
       'department': 'Department of Controls'
     },
     {
       'name': "Tushar Vigh",
       'img': recnacc,
-      'desc': 'Lorem ipsum dolor sit amet consectetur. Pharetra dui fringilla blandit sit.',
       'department': 'Department of Reception and Accommodation'
     },
     {
       'name': "Hitansh Tanna",
       'img': spons,
-      'desc': 'Lorem ipsum dolor sit amet consectetur. Pharetra dui fringilla blandit sit.',
       'department': 'Department of Sponsorship and Marketing'
     },
     {
       'name': "Abhinav Lamba",
       'img': gensec,
-      'desc': 'Lorem ipsum dolor sit amet consectetur. Pharetra dui fringilla blandit sit.',
       'department': 'General Secretary, Students’ Union'
     },
     {
       'name': "Sarthak Aggarwal",
       'img': prez,
-      'desc': 'Lorem ipsum dolor sit amet consectetur. Pharetra dui fringilla blandit sit.',
       'department': 'President, Students’ Union'
     }
   ]
@@ -148,7 +140,7 @@ export default function App() {
             alt="logo"
           />
         </div>
-        <CostaaCard details={list[activeCostaan]} ref={ref} />
+        <CostaaCard details={list[activeCostaan]} index={activeCostaan} images={[dvm, pep, adp, pcra, controls, recnacc, spons, gensec, prez]} ref={ref} />
       </main>
     </>
   )
