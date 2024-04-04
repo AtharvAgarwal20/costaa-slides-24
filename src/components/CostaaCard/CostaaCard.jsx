@@ -2,7 +2,7 @@ import * as styles from './CostaaCard.module.scss'
 
 import { forwardRef } from 'react'
 
-import cardFrame from '../../assets/cardFrame.png'
+import cardFrame from '../../assets/cardFrame2.png'
 
 const CostaaCard = forwardRef(function ({ details }, ref) {
     return (
